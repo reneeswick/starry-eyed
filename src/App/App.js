@@ -44,7 +44,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={() => <Home />} />
         <Route path='/blogs' render={() => <BlogCardContainer toggleFavorites={toggleFavorites} />} />
-        <Route path='/saved' render={() => <SavedForLaterContainer />} />
+        <Route path='/saved' render={() => <SavedForLaterContainer favorites={favorites} toggleFavorites={toggleFavorites} />} />
         <Route path='/report' render={() => <ISSReportContainer />} />
         <Route path='/error' render={() => <Error />} />
       </Switch>
