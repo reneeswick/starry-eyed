@@ -1,9 +1,10 @@
 import React from 'react';
+import './ISSReportCard.css';
 
 const ISSReportCard = ({ issReports }) => {
   let singleISSReportCard = issReports.map((report) => {
     return (
-      <div id={report.id} key={report.id}>
+      <div className='report-card' id={report.id} key={report.id}>
         <p>{report.title}</p>
         <p>{report.publishedAt}</p>
         {/*<img src={report.image} alt={report.title} />*/}
@@ -15,7 +16,7 @@ const ISSReportCard = ({ issReports }) => {
   })
 
   return (
-    <div>
+    <div className='report-card-grid'>
       {singleISSReportCard}
     </div>
   )
