@@ -1,12 +1,14 @@
 import React from 'react';
 import SavedCard from '../SavedCard/SavedCard';
 
-const SavedForLaterContainer = () => {
+const SavedForLaterContainer = ({ favorites, toggleFavorites }) => {
 
   return (
-    <div>
-      <h2>SavedForLaterContainer</h2>
-      <SavedCard />
+    <div className='blog-card-container'>
+      <SavedCard
+        favorites={favorites}
+        toggleFavorites={toggleFavorites}
+      />
     </div>
   )
 }
