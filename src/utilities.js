@@ -1,6 +1,7 @@
-import { getBlogs } from './apiCalls';
+import { getBlogs, getISSReports } from './apiCalls';
 
-export let blogsData = [];
+let blogsData = [];
+let issReportsData = [];
 
 export const cleanBlogsData = () => {
   getBlogs()
@@ -18,4 +19,25 @@ export const cleanBlogsData = () => {
         })
       )
     })
+    return blogsData;
 };
+
+export const cleanISSReportsData = () => {
+  getISSReports()
+    .then(data => {
+      issReportsData = (
+        data.map((report) => {
+          return {
+            id: report.id,
+            image: report.imageUrl,
+            newsSite: report.newsSite,
+            publishedAt: report.publishedAt,
+            summary: report.summary,
+            title: report.title,
+            url: report.url
+          }
+        })
+      )
+    })
+    return issReportsData
+}
