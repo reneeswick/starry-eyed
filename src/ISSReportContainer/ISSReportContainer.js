@@ -12,7 +12,7 @@ const ISSReportContainer = () => {
   return (
     <div>
       <h2>ISSReportContainer</h2>
-      <ISSReportCard />
+      <ISSReportCard issReports={issReports}/>
     </div>
   )
 }
