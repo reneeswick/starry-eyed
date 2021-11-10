@@ -3,3 +3,9 @@ export const getBlogs = () => {
     .then(response => response.json())
     .catch(err => console.log(err))
 };
+
+export const getISSReports = () => {
+  return fetch('https://api.spaceflightnewsapi.net/v3/reports')
+    .then(response => response.json())
+    .catch(err => console.log(err))
+};
