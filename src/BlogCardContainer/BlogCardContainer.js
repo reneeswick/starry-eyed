@@ -8,11 +8,10 @@ const BlogCardContainer = () => {
   useEffect(() => {
     cleanBlogsData()
     setBlogs(blogsData)
-  }, [])
+  }, []);
 
   return (
     <div>
-      <h2>BlogCardContainer!</h2>
       <BlogCard blogs={blogs} />
     </div>
   )
