@@ -4,6 +4,7 @@ import BlogCardContainer from '../BlogCardContainer/BlogCardContainer';
 import SavedForLaterContainer from '../SavedForLaterContainer/SavedForLaterContainer';
 import ISSReportContainer from '../ISSReportContainer/ISSReportContainer';
 import Home from '../Home/Home';
+import Error from '../Error/Error';
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <BlogCardContainer />
         <SavedForLaterContainer />
         <ISSReportContainer />
+        <Error />
       </Switch>
     </main>
   )
