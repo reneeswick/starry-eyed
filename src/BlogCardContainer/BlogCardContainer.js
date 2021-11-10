@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BlogCard from '../BlogCard/BlogCard';
 import { cleanBlogsData, blogsData } from '../utilities';
+import './BlogCardContainer.css';
 
 const BlogCardContainer = () => {
   const [blogs, setBlogs] = useState([])
@@ -11,7 +12,7 @@ const BlogCardContainer = () => {
   }, []);
 
   return (
-    <div>
+    <div className='blog-card-container'>
       <BlogCard blogs={blogs} />
     </div>
   )

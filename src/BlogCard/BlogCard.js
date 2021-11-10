@@ -1,20 +1,22 @@
 import React from 'react';
+import './BlogCard.css';
 
 const BlogCard = ({ blogs }) => {
 
   let singleBlogCard = blogs.map((blog) => {
     return (
-    <div id= {blog.id} key= {blog.id}>
-        <img src={blog.image} alt={blog.title}/>
+    <div className= 'blog-card' id= {blog.id} key= {blog.id}>
         <p>{blog.title}</p>
+        <p>{blog.publishedAt}</p>
+        <img className='blog-img' src={blog.image} alt={blog.title}/>
         <p>{blog.summary}</p>
-        <a href={blog.url}> Read Full Article here</a>
+        <a href={blog.url}> Read More</a>
       </div>
     )
   })
 
   return (
-    <div>
+    <div className='blog-card-grid'>
       {singleBlogCard}
     </div>
   )
