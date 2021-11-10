@@ -21,6 +21,7 @@ const App = () => {
     setFavorites(filteredFavorites)
   };
 
+
   const toggleFavorites = (blog) => {
     let favoriteIDs = favorites.map((favorite) => {
       return favorite.id
@@ -31,6 +32,7 @@ const App = () => {
       addToFavorites(blog)
     }
   };
+
 
   return (
     <main>
@@ -43,7 +45,7 @@ const App = () => {
       </nav>
       <Switch>
         <Route exact path='/' render={() => <Home />} />
-        <Route path='/blogs' render={() => <BlogCardContainer toggleFavorites={toggleFavorites} />} />
+        <Route path='/blogs' render={() => <BlogCardContainer favorites={favorites} toggleFavorites={toggleFavorites} />} />
         <Route path='/saved' render={() => <SavedForLaterContainer favorites={favorites} toggleFavorites={toggleFavorites} />} />
         <Route path='/report' render={() => <ISSReportContainer />} />
         <Route path='/error' render={() => <Error />} />

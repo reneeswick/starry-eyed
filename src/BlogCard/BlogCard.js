@@ -1,12 +1,15 @@
 import React from 'react';
 import './BlogCard.css';
 
-const BlogCard = ({ blogs, toggleFavorites }) => {
+const BlogCard = ({ blogs, toggleFavorites, favorites }) => {
+  let favoriteIDs = favorites.map((favorite) => {
+    return favorite.id
+  })
 
   let singleBlogCard = blogs.map((blog) => {
     return (
     <div className= 'blog-card' id= {blog.id} key= {blog.id}>
-      <button onClick={() => {toggleFavorites(blog)}}>♡</button>
+      {!favoriteIDs.includes(blog.id) ? <button onClick={() => {toggleFavorites(blog)}}>♡</button> : <button onClick={() => {toggleFavorites(blog)}}>❤️</button>}
       <p>{blog.title}</p>
       <p>{blog.publishedAt}</p>
       <img className='blog-img' src={blog.image} alt={blog.title}/>

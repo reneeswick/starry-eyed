@@ -3,7 +3,7 @@ import BlogCard from '../BlogCard/BlogCard';
 import { cleanBlogsData } from '../utilities';
 import './BlogCardContainer.css';
 
-const BlogCardContainer = ({ toggleFavorites }) => {
+const BlogCardContainer = ({ toggleFavorites, favorites }) => {
   const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
@@ -15,6 +15,7 @@ const BlogCardContainer = ({ toggleFavorites }) => {
       <BlogCard
         blogs={blogs}
         toggleFavorites={toggleFavorites}
+        favorites={favorites}
       />
     </div>
   )
