@@ -6,15 +6,26 @@ const BlogCard = ({ blogs, toggleFavorites, favorites }) => {
     return favorite.id
   })
 
+  const handleFavoritesBtn = (blog) => {
+    if(!favoriteIDs.includes(blog.id)) {
+      return <button onClick={() => {toggleFavorites(blog)}}>♡</button>
+    } else {
+      return <button className='favorite-btn-active' onClick={() => {toggleFavorites(blog)}}>❤️</button>
+    }
+  }
+
   let singleBlogCard = blogs.map((blog) => {
+    let time = blog.publishedAt.slice(0, 7)
     return (
     <div className= 'blog-card' id= {blog.id} key= {blog.id}>
-      {!favoriteIDs.includes(blog.id) ? <button onClick={() => {toggleFavorites(blog)}}>♡</button> : <button onClick={() => {toggleFavorites(blog)}}>❤️</button>}
-      <p>{blog.title}</p>
-      <p>{blog.publishedAt}</p>
+      <div className='blog-card-header'>
+        <p className='blog-title'>{blog.title}</p>
+        <p className='blog-pub-time'>{time}</p>
+        {handleFavoritesBtn(blog)}
+      </div>
       <img className='blog-img' src={blog.image} alt={blog.title}/>
-      <p>{blog.summary}</p>
-      <a href={blog.url}> Read More</a>
+      <p className='blog-summ'>{blog.summary}</p>
+      <a className='read-more' href={blog.url}> Read More</a>
       </div>
     )
   })

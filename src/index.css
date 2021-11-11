@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+Optional LIGHT MODE bckgrnd: background-image: url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_467019654_2000133320009280405_283806.jpg);
+background-repeat: no-repeat;
+*/
+/*DARK MODE
+background-image: url(https://img1.goodfon.com/wallpaper/nbig/f/cc/planeta-zemlya-rassvet-solnce.jpg);
+*/
+
+html {
+  height: 100vh;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
+body {
+  margin: 0;
+  font-family: 'News Cycle', sans-serif;
+  /* background-image: url(https://i.guim.co.uk/img/media/9a3f8b199ea6df62de5a5351096b23af6e92aa9f/500_234_3388_2033/master/3388.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=2d4754d004499f3dc3d270dfdc84a37a);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%; */
 }
