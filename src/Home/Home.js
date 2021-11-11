@@ -1,9 +1,16 @@
 import React from 'react';
+import './Home.css';
 
 const Home = () => {
 
   return (
-    <h2>Home!</h2>
+    <div className='home-view'>
+      <h2 className='slogan'>Feeling Starry Eyed?</h2>
+      <p className='about-us'>Check out our space blog, save some articles for later, or track down the latest news from the International Space Station (ISS)</p>
+      <p className='prompt'>Choose your mode</p>
+      <button>dawn</button>
+      <button>dusk</button>
+    </div>
   )
 }
 

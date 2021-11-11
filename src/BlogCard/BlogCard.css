@@ -1,7 +1,7 @@
 .blog-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
 }
 
@@ -65,7 +65,7 @@
   margin-bottom: 0;
 }
 
-button {
+.blog-card-header > button {
   display: flex;
   justify-content: flex-start;
   background-color: transparent;
