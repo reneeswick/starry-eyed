@@ -39,10 +39,10 @@ const App = () => {
       <header>
         <img className='logo' src='https://www.nicepng.com/png/detail/194-1944887_circular-logo-circular-logo-mops-theme-starry-eyed.png' />
         <nav>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/blogs'>Blogs</NavLink>
-          <NavLink to='/saved'>Saved for Later</NavLink>
-          <NavLink to='/report'>ISS Report</NavLink>
+          <NavLink exact to='/' className='navBtn' activeClassName='active'>Home</NavLink>
+          <NavLink to='/blogs' className='navBtn' activeClassName='active'>Blogs</NavLink>
+          <NavLink to='/saved' className='navBtn' activeClassName='active'>Saved for Later</NavLink>
+          <NavLink to='/report' className='navBtn' activeClassName='active'>ISS Report</NavLink>
         </nav>
       </header>
       <Switch>
