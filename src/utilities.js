@@ -1,5 +1,3 @@
-import { getBlogs, getISSReports } from './apiCalls';
-
 let blogsData = [];
 let issReportsData = [];
 
@@ -12,15 +10,14 @@ export const cleanBlogsData = (data) => {
             newsSite: blog.newsSite,
             publishedAt: blog.publishedAt,
             summary: blog.summary,
-            url: blog.url}
-        })
+            url: blog.url
+          }
+        }
+      )
     }
 
-export const cleanISSReportsData = () => {
-  getISSReports()
-    .then(data => {
-      issReportsData = (
-        data.map((report) => {
+export const cleanISSReportsData = (data) => {
+  return data.map((report) => {
           return {
             id: report.id,
             image: report.imageUrl,
@@ -30,8 +27,6 @@ export const cleanISSReportsData = () => {
             title: report.title,
             url: report.url
           }
-        })
+        }
       )
-    })
-    return issReportsData
 }

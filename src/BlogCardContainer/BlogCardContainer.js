@@ -12,7 +12,7 @@ const BlogCardContainer = ({ toggleFavorites, favorites }) => {
     let blogsData = []
     getBlogs()
       .then(data => {
-        blogsData=cleanBlogsData(data)
+        blogsData = cleanBlogsData(data)
         setBlogs(blogsData)
       }
     )
