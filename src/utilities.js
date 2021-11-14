@@ -1,6 +1,3 @@
-let blogsData = [];
-let issReportsData = [];
-
 export const cleanBlogsData = (data) => {
   return data.map((blog) => {
           return {

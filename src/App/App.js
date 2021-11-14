@@ -32,7 +32,6 @@ const App = () => {
     setFavorites(filteredFavorites)
   };
 
-
   const toggleFavorites = (blog) => {
     let favoriteIDs = favorites.map((favorite) => {
       return favorite.id
@@ -47,7 +46,7 @@ const App = () => {
   return (
     <main className={`${mode}`}>
       <header>
-        <img className='logo' src='https://www.nicepng.com/png/detail/194-1944887_circular-logo-circular-logo-mops-theme-starry-eyed.png' />
+        <img className='logo' src='https://www.nicepng.com/png/detail/194-1944887_circular-logo-circular-logo-mops-theme-starry-eyed.png' alt='Starry Eyed round logo' />
         <nav>
           <NavLink exact to='/' className='navBtn' activeClassName='active'>Home</NavLink>
           <NavLink to='/blogs' className='navBtn' activeClassName='active'>Blogs</NavLink>
@@ -58,10 +57,10 @@ const App = () => {
       </header>
       <Switch>
         <Route exact path='/' render={() => <Home changeToDarkMode={changeToDarkMode} />} />
-        <Route path='/blogs' render={() => <BlogCardContainer favorites={favorites} toggleFavorites={toggleFavorites} mode={mode} />} />
-        <Route path='/saved' render={() => <SavedForLaterContainer favorites={favorites} toggleFavorites={toggleFavorites} />} />
-        <Route path='/report' render={() => <ISSReportContainer mode={mode}/>} />
-        <Route path='/error' render={() => <Error />} />
+        <Route exact path='/blogs' render={() => <BlogCardContainer favorites={favorites} toggleFavorites={toggleFavorites} mode={mode} />} />
+        <Route exact path='/saved' render={() => <SavedForLaterContainer favorites={favorites} toggleFavorites={toggleFavorites} />} />
+        <Route exact path='/report' render={() => <ISSReportContainer mode={mode}/>} />
+        <Route render={() => <Error />} />
       </Switch>
     </main>
   )
