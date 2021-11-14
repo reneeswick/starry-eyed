@@ -11,7 +11,10 @@ const Home = () => {
       <div className='mode-container'>
         <p>☀️</p>
         <label class="switch">
-          <input type="checkbox"/>
+          <input
+            type="checkbox"
+            onClick={(event) => console.log(event.target.checked)}
+          />
           <span class="slider round"></span>
         </label>
           {/*<button className='mode-btn'>dawn</button>
