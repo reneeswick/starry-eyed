@@ -8,7 +8,7 @@ const BlogCard = ({ blogs, toggleFavorites, favorites, mode }) => {
 
   const handleFavoritesBtn = (blog) => {
     if(!favoriteIDs.includes(blog.id)) {
-      return <button onClick={() => {toggleFavorites(blog)}}>♡</button>
+      return <button id={`${blog.id}`} onClick={() => {toggleFavorites(blog)}}>♡</button>
     } else {
       return <button className='favorite-btn-active' onClick={() => {toggleFavorites(blog)}}>❤️</button>
     }
