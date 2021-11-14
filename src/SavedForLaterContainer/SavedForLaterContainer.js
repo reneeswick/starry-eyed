@@ -9,7 +9,7 @@ const SavedForLaterContainer = ({ favorites, toggleFavorites }) => {
         <p>Click the heart on a blog post to save it for later</p>
       </div>
     )
-  }
+  };
 
   return (
     <div className='blog-card-container'>
@@ -20,6 +20,6 @@ const SavedForLaterContainer = ({ favorites, toggleFavorites }) => {
       />}
     </div>
   )
-}
+};
 
 export default SavedForLaterContainer;

@@ -4,7 +4,7 @@ import './BlogCard.css';
 const BlogCard = ({ blogs, toggleFavorites, favorites, mode }) => {
   let favoriteIDs = favorites.map((favorite) => {
     return favorite.id
-  })
+  });
 
   const handleFavoritesBtn = (blog) => {
     if(!favoriteIDs.includes(blog.id)) {
@@ -12,7 +12,7 @@ const BlogCard = ({ blogs, toggleFavorites, favorites, mode }) => {
     } else {
       return <button className='favorite-btn-active' onClick={() => {toggleFavorites(blog)}}>❤️</button>
     }
-  }
+  };
 
   let singleBlogCard = blogs.map((blog) => {
     let time = blog.publishedAt.slice(0, 7)
@@ -28,13 +28,13 @@ const BlogCard = ({ blogs, toggleFavorites, favorites, mode }) => {
       <a className='read-more' href={blog.url}> Read More</a>
       </div>
     )
-  })
+  });
 
   return (
     <div className='blog-card-grid'>
       {singleBlogCard}
     </div>
   )
-}
+};
 
 export default BlogCard;

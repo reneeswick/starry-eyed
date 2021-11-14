@@ -7,7 +7,6 @@ import './BlogCardContainer.css';
 const BlogCardContainer = ({ toggleFavorites, favorites, mode }) => {
   const [blogs, setBlogs] = useState([])
 
-
   useEffect(() => {
     let blogsData = []
     getBlogs()
@@ -28,6 +27,6 @@ const BlogCardContainer = ({ toggleFavorites, favorites, mode }) => {
       />
     </div>
   )
-}
+};
 
 export default BlogCardContainer;

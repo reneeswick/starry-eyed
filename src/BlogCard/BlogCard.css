@@ -1,8 +1,10 @@
 .blog-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 1rem;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
 .blog-card {
@@ -24,11 +26,9 @@
 .blog-card-header {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  /* grid-template-columns: 1fr 1fr; */
   background-color: #e9d8a6;
   border-bottom: solid .5rem black;
   color: #001219;
-  /* position: absolute; */
   height: 8rem;
   width: 100%;
   border-top-left-radius: .75rem;

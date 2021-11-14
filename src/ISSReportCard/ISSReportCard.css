@@ -1,6 +1,8 @@
 .report-card-grid {
   display: grid;
   grid-gap: .5rem;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .report-card {

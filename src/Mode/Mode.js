@@ -2,6 +2,7 @@ import React from 'react';
 import './Mode.css';
 
 const Mode = ({ changeToDarkMode }) => {
+
   return (
     <div className='mode-container'>
       <p>☀️</p>
@@ -16,6 +17,6 @@ const Mode = ({ changeToDarkMode }) => {
       <p>🌙</p>
     </div>
   )
-}
+};
 
 export default Mode;

@@ -14,7 +14,7 @@ const ISSReportContainer = ({mode}) => {
         reportsData = cleanISSReportsData(data)
         setISSReports(reportsData)
       })
-  }, [issReports])
+  }, [issReports]);
 
   return (
     <div className='report-card-container'>
@@ -22,6 +22,6 @@ const ISSReportContainer = ({mode}) => {
       <ISSReportCard issReports={issReports} mode={mode}/>
     </div>
   )
-}
+};
 
 export default ISSReportContainer;

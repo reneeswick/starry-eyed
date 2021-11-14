@@ -12,13 +12,13 @@ const ISSReportCard = ({ issReports, mode }) => {
         <a className='iss-read-more' href={report.url}>Read More</a>
       </div>
     )
-  })
+  });
 
   return (
     <div className='report-card-grid'>
       {singleISSReportCard}
     </div>
   )
-}
+};
 
 export default ISSReportCard;

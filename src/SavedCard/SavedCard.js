@@ -3,7 +3,7 @@ import React from 'react';
 const SavedCard = ({ favorites, toggleFavorites }) => {
   let favoriteIDs = favorites.map((favorite) => {
     return favorite.id
-  })
+  });
 
   let favoriteCard = favorites.map((favorite) => {
     return (
@@ -16,13 +16,13 @@ const SavedCard = ({ favorites, toggleFavorites }) => {
         <a href={favorite.url}> Read More</a>
         </div>
     )
-  })
+  });
 
   return (
     <div className='blog-card-grid'>
       {favoriteCard}
     </div>
   )
-}
+};
 
 export default SavedCard;

@@ -9,6 +9,6 @@ const Home = () => {
       <p className='about-us'>Check out our space blog, save some articles for later, or track down the latest news from the International Space Station (ISS)</p>
     </div>
   )
-}
+};
 
 export default Home;
