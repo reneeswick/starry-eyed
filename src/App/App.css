@@ -4,10 +4,10 @@ main {
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0;
   color: white;
-  position: absolute;
+  /* position: absolute; */
   /* background-color: #ee9b00; */
 }
 
@@ -44,4 +44,8 @@ nav {
 .active {
   color: #0a9396;
   text-decoration: underline;
+}
+
+.dark {
+  background-image: url(https://img1.goodfon.com/wallpaper/nbig/f/cc/planeta-zemlya-rassvet-solnce.jpg);
 }
