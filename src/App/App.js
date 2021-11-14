@@ -14,7 +14,6 @@ const App = () => {
   const [mode, setMode] = useState('');
 
   const changeToDarkMode = (event) => {
-    // event.preventDefault()
     if(event.target.checked) {
       setMode('dark')
     } else {
@@ -59,9 +58,9 @@ const App = () => {
       </header>
       <Switch>
         <Route exact path='/' render={() => <Home changeToDarkMode={changeToDarkMode} />} />
-        <Route path='/blogs' render={() => <BlogCardContainer favorites={favorites} toggleFavorites={toggleFavorites} />} />
+        <Route path='/blogs' render={() => <BlogCardContainer favorites={favorites} toggleFavorites={toggleFavorites} mode={mode} />} />
         <Route path='/saved' render={() => <SavedForLaterContainer favorites={favorites} toggleFavorites={toggleFavorites} />} />
-        <Route path='/report' render={() => <ISSReportContainer />} />
+        <Route path='/report' render={() => <ISSReportContainer mode={mode}/>} />
         <Route path='/error' render={() => <Error />} />
       </Switch>
     </main>

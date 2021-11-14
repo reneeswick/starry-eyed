@@ -89,22 +89,3 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
-.mode-container {
-  display: flex;
-  justify-content: center;
-}
-
-/* .mode-btn {
-  color: #e9d8a6;
-  font-size: 50pt;
-  background-color: #005f73;
-  border: none;
-  border-radius: 20rem;
-  cursor: pointer;
-}
-
-.mode-btn:hover {
-  color: #005f73;
-  background-color: #e9d8a6;
-} */

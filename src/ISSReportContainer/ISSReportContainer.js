@@ -4,7 +4,7 @@ import { cleanISSReportsData } from '../utilities';
 import { getISSReports } from '../apiCalls';
 import './ISSReportContainer.css';
 
-const ISSReportContainer = () => {
+const ISSReportContainer = ({mode}) => {
   const [issReports, setISSReports] = useState([])
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const ISSReportContainer = () => {
   return (
     <div className='report-card-container'>
       <h2>ISS Daily Summary Report (NASA) </h2>
-      <ISSReportCard issReports={issReports}/>
+      <ISSReportCard issReports={issReports} mode={mode}/>
     </div>
   )
 }

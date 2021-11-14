@@ -1,4 +1,5 @@
 import React from 'react';
+import './Mode.css';
 
 const Mode = ({ changeToDarkMode }) => {
   return (

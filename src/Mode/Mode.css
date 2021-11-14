@@ -1,0 +1,29 @@
+.mode-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.dark {
+  background-image: url(https://img1.goodfon.com/wallpaper/nbig/f/cc/planeta-zemlya-rassvet-solnce.jpg);
+  color: white;
+}
+
+.blog-card-header.dark {
+  background-image: none;
+  background-color: #005f73;
+}
+
+.blog-card.dark {
+  background-image: none;
+  background-color: #001219;
+}
+
+.report-card.dark {
+  background-image: none;
+  background-color: #001219;
+}
+
+.dark > a {
+  color: #e9d8a6;
+}

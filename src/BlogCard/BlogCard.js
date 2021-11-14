@@ -1,7 +1,7 @@
 import React from 'react';
 import './BlogCard.css';
 
-const BlogCard = ({ blogs, toggleFavorites, favorites }) => {
+const BlogCard = ({ blogs, toggleFavorites, favorites, mode }) => {
   let favoriteIDs = favorites.map((favorite) => {
     return favorite.id
   })
@@ -17,8 +17,8 @@ const BlogCard = ({ blogs, toggleFavorites, favorites }) => {
   let singleBlogCard = blogs.map((blog) => {
     let time = blog.publishedAt.slice(0, 7)
     return (
-    <div className= 'blog-card' id= {blog.id} key= {blog.id}>
-      <div className='blog-card-header'>
+    <div className= {`blog-card ${mode}`} id= {blog.id} key= {blog.id}>
+      <div className={`blog-card-header ${mode}`}>
         <p className='blog-title'>{blog.title}</p>
         <p className='blog-pub-time'>{time}</p>
         {handleFavoritesBtn(blog)}
