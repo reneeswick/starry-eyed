@@ -3,6 +3,7 @@ import BlogCard from '../BlogCard/BlogCard';
 import { cleanBlogsData } from '../utilities';
 import { getBlogs } from '../apiCalls';
 import './BlogCardContainer.css';
+import Error from '../Error/Error';
 
 const BlogCardContainer = ({ toggleFavorites, favorites, mode }) => {
   const [blogs, setBlogs] = useState([])

@@ -6,13 +6,13 @@ const Mode = ({ changeToDarkMode }) => {
   return (
     <div className='mode-container'>
       <p>☀️</p>
-      <label class='switch'>
+      <label className='switch'>
         <input
           type='checkbox'
           name='mode'
           onClick={(event) => changeToDarkMode(event)}
         />
-        <span class='slider round'></span>
+        <div className='slider round'></div>
       </label>
       <p>🌙</p>
     </div>
