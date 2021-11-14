@@ -1,6 +1,5 @@
 describe('Blogs view', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/blogs')
     cy.intercept('GET', 'https://api.spaceflightnewsapi.net/v3/blogs', {
       statusCode: 201,
       body: [
@@ -42,6 +41,7 @@ describe('Blogs view', () => {
   }
     ]
     })
+    cy.visit('http://localhost:3000/blogs')
   });
 
   it('Should display a collection of space blogs', () => {
