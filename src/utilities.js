@@ -1,13 +1,8 @@
-import { getBlogs, getISSReports } from './apiCalls';
-
 let blogsData = [];
 let issReportsData = [];
 
-export const cleanBlogsData = () => {
-  getBlogs()
-    .then(data => {
-      blogsData = (
-        data.map((blog) => {
+export const cleanBlogsData = (data) => {
+  return data.map((blog) => {
           return {
             id:blog.id,
             title: blog.title,
@@ -15,18 +10,14 @@ export const cleanBlogsData = () => {
             newsSite: blog.newsSite,
             publishedAt: blog.publishedAt,
             summary: blog.summary,
-            url: blog.url}
-        })
+            url: blog.url
+          }
+        }
       )
-    })
-    return blogsData;
-};
+    }
 
-export const cleanISSReportsData = () => {
-  getISSReports()
-    .then(data => {
-      issReportsData = (
-        data.map((report) => {
+export const cleanISSReportsData = (data) => {
+  return data.map((report) => {
           return {
             id: report.id,
             image: report.imageUrl,
@@ -36,8 +27,6 @@ export const cleanISSReportsData = () => {
             title: report.title,
             url: report.url
           }
-        })
+        }
       )
-    })
-    return issReportsData
-}
+    }

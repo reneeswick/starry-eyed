@@ -1,13 +1,37 @@
 .report-card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: .5rem;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .report-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items:flex-start;
   align-items: center;
-  border: solid 2px black;
+  border-radius: .25rem;
+  background-color: #e9d8a6;
+  color: #001219;
+  box-shadow: 5px 2px 2px #001219;
+}
+
+.iss-img {
+  height: 5rem;
+  width: 5rem;
+  margin: .25rem;
+}
+
+.iss-publish-time {
+  font-size: 10pt;
+  color: #9b2226;
+}
+
+.iss-read-more {
+  margin-right: 1rem;
+  font-weight: lighter;
+}
+
+.iss-summary {
+  font-weight: bolder;
 }
