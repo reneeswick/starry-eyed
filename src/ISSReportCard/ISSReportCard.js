@@ -6,7 +6,7 @@ const ISSReportCard = ({ issReports, mode }) => {
     let time = report.publishedAt.slice(0, 7)
     return (
       <div className={`report-card ${mode}`} id={report.id} key={report.id}>
-        <img className='iss-img' src={report.image} alt={report.title} />
+        <img className='iss-img' src={report.image} alt={`ISS cartoon ${report.title}`} />
         <p className='iss-publish-time'>{time}</p>
         <p className='iss-summary'>{report.summary}</p>
         <a className='iss-read-more' href={report.url}>Read More</a>

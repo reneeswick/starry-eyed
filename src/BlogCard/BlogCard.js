@@ -23,7 +23,7 @@ const BlogCard = ({ blogs, toggleFavorites, favorites, mode }) => {
         <p className='blog-pub-time'>{time}</p>
         {handleFavoritesBtn(blog)}
       </div>
-      <img className='blog-img' src={blog.image} alt={blog.title}/>
+      <img className='blog-img' src={blog.image} alt={`Featured space photo for ${blog.title}`}/>
       <p className='blog-summ'>{blog.summary}</p>
       <a className='read-more' href={blog.url}> Read More</a>
       </div>
