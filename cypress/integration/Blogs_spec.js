@@ -45,9 +45,9 @@ describe('Blogs view', () => {
   });
 
   it('Should display a collection of space blogs', () => {
-    cy.get('.blog-card-container')
+    cy.get('.blog-card')
       .should('be.visible')
-    expect('.blog-card-container').to.have.length(20)
+      .should('have.length', 3)
   });
 
   it('Each blog card should display a title, data, image, summary, and link to read more', () => {
