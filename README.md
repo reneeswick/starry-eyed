@@ -23,7 +23,7 @@ Feeling Starry Eyed? This space news application is a landing spot for busy star
 ![Blogs view in dark mode](https://user-images.githubusercontent.com/83723401/141830139-8c46bd97-4089-4707-a562-77c5b860b3ac.png)
 
 ## Deployed Page and Illustrations
-INSERT DEPLOYED LINK HERE
+View the deployed site [here!](https://starry-eyed.surge.sh/)
 
 ![Walk-through of each view in the app](https://user-images.githubusercontent.com/83723401/141832661-86f7ab99-c2f3-495b-9caa-dbc82dd99433.gif)
 
