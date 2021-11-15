@@ -88,3 +88,13 @@ input:checked + .slider:before {
 .dark > a {
   color: #e9d8a6;
 }
+
+.navBtn.dark {
+  background-image: none;
+  color: white;
+}
+
+.navBtn.dark.active {
+  background-image: none;
+  color: #e9d8a6;
+}
