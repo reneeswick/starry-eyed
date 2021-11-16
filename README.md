@@ -43,7 +43,7 @@ View the deployed site [here!](https://starry-eyed.surge.sh/)
 ## Code Architecture
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-``Componenets and CSS``
+``Components and CSS``
 - Each component has its own directory in the ``src`` directory containing corressponding ``.css`` and ``.js`` files.
 
 ``Network Requests and Utilities``
